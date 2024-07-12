@@ -4,6 +4,7 @@ import About from '../../components/About/About'
 import Nav from '../../components/Nav/Nav'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import { Link} from 'react-router-dom';
 
 function Home(){
     return(<>
@@ -12,7 +13,11 @@ function Home(){
             <Header/>
             <About/>
             <Contact/>
+
+            <Link to={"/CrearEmprendimiento"}>Crear Emprendimiento</Link>
             <Footer />
+
+            
         </div>
         
 
