@@ -3,6 +3,7 @@ import './footer.css'
 import Location from '../../assets/location-footer.svg'
 import Email from '../../assets/email-footer.svg'
 import Phone from '../../assets/call-calling.svg'
+import logo from '../../assets/logo-footer.svg'
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className ='up'>
         <div className='left'>
             <div className='logo-container'>
-                EL LOGO
+                <img src={logo} alt="logo"/>
             </div>
             <div className='contact-links'>
                 <ul>

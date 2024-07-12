@@ -23,17 +23,21 @@
         .left{
             display:flex;
             flex-direction:column;
-            gap:2rem;
+            
             .logo-container{
                 display:flex;
-                align-items:center;
-                justify-content:center;
+                align-items: center;
+                justify-content:start;
                 min-width:100%;
+                img{
+                
+                width: 40%;
+                }
             }
             .contact-links{
                 display:flex;
                 min-width:100%;
-                padding: 0 4rem;
+                
                 ul{
                     display:flex;
                     flex-direction:column;
@@ -63,7 +67,9 @@
     
         .right{
             text-align:right;
-            padding: 0 4rem;
+            padding-left: 4rem;
+            align-items: center;
+            display: flex;
         }
     }
     .copy{
