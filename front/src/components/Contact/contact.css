@@ -1,0 +1,83 @@
+.contacto {
+    display: flex;
+    gap:5rem;
+    color: #FFFFFF;
+    text-align: left;
+    justify-content: center;
+    padding-top: 15.569rem;
+    padding-bottom:16.931rem ;
+}
+
+.info-contact {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40%;
+    
+}
+
+.img-contact {
+    width: 25rem;
+    object-fit: contain;
+}
+
+.titulo-contact {
+
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+.parrafo-contact {
+    font-size: 1.313rem;
+    text-align:end;
+}
+
+.descripcion-contact {
+    display: flex;
+    
+    gap:2rem;
+    align-items: center;
+
+    img{
+        width: 2.5rem;
+        height: 2.7rem;
+    }
+}
+
+.fila-descripcion{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: flex-end;
+    
+    
+}
+.titulo-descripcion {
+    font-size: 1.313rem;
+    font-weight: bold;
+    
+}
+
+
+
+.amarillo {
+    color: #FFE922;
+}
+
+.ayudaa{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:2rem;
+}
+
+hr{
+    width: 10rem;
+    border: 2px solid #fdfdfd;
+    margin: 0;
+}

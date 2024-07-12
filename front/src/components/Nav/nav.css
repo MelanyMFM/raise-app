@@ -1,0 +1,49 @@
+.nav-bar {
+    position: absolute;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos */
+    color: #fdfdfd;
+    font-size:1.2rem;
+    
+
+    .left {
+        width: 25%;
+    }
+  
+    .center {
+      flex-grow: 1; /* Ocupa todo el espacio posible */
+      display: flex;
+      width:50%;
+      justify-content: center; /* Centra los elementos hijos horizontalmente */
+      ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+  
+            li {
+                cursor: pointer;
+            }  
+        } 
+    }
+  
+    .right {
+      display: flex;
+      justify-content:end;
+      gap: 1.6rem;
+      width: 25%;
+      align-items:center;
+      text-decoration: none;
+        button{
+            padding: .5rem 1.6rem;
+            font-size:1.2rem;
+            background: #FFE922;
+            border-radius: 6px;
+            border: none;
+        }
+      
+    }
+}
+

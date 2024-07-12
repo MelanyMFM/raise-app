@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+.cosoMorado{
+    display:flex;
+    flex-direction: column;
+    background-color: #AFB9DD;
+    border-radius: 28px;
+    padding:2.5rem;
+    row-gap:2.438rem;
+
+
+
+.cosoMoradoPequeño{
+    color:#000000;
+    display:flex;
+    
+    gap:6.375rem;
+    .izquierda{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        img{
+            width: 38.625rem;
+            height: 24.063rem;
+            border-radius: 6px;
+        }
+        p{
+            font-size: 0.875rem;
+            
+        }
+    }
+
+    .derecha{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:2.5rem;
+        .nombre{
+            font-size: 2.25rem;
+            font-weight: 500;
+
+        }
+        img{
+            width: 25.125rem;
+            height: 8.813rem;
+            object-fit:cover;
+            
+        }
+
+        .value{
+            font-family: 'Fira Code', monospace;
+            font-size: 1.625rem;
+            text-align: left;
+        }
+
+        .botones{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            button{
+                background-color: #032250;
+                border:none;
+                border-radius: 14px;
+                color:#FFFFFF;
+                font-size: 1.625rem;
+                padding: 0.563rem 1.875rem;
+                cursor:pointer;
+                transition: all 0.125s ease-in-out;
+                
+            }
+
+            button:hover{
+                transform:scale(1.025);
+            }
+        }
+    }
+}
+
+
+.descripcion{
+    font-size:1.625rem ;
+}
+}

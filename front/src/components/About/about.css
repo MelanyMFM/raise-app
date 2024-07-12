@@ -1,0 +1,46 @@
+.about{
+    display: flex;
+    color:#FFFFFF;
+    gap:6.813rem;
+    justify-content: center;
+    padding-top: 8.25rem;
+    .about-img{
+        width: 28rem;
+        height: 26rem;
+        margin-top: 5rem;
+    }
+    .about-izq{
+        display: flex;
+        flex-direction: column;
+        gap:1.625rem;
+        
+        width: 32.5rem;
+        .about-title{
+            font-size: 1.5rem;
+        }
+
+        .about-title-grande{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .about-subtitulo{
+            font-size: 1.063rem;
+        }
+        .about-texto{
+            font-size: 1.75rem;
+            line-height: 2.188rem;
+        }
+
+        .about-boton{
+            font-size:1.063rem ;
+            border: solid #FFE922 2px;
+            cursor:pointer;
+            width:10.938rem ;
+            padding:.5rem 0;
+            text-align: center;
+        }
+            
+    }
+    
+}
