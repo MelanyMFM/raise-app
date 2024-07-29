@@ -84,3 +84,11 @@
     font-size:1.625rem ;
 }
 }
+
+
+@media (max-width: 480px){
+    .cosoMoradoPequeño{
+        display: flex;
+        flex-direction: column;
+    }
+}

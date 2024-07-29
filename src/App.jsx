@@ -9,7 +9,7 @@ import CrearEmprendimiento from './views/CrearEmprendimiento/CrearEmprendimiento
 function App() {
 
   return (
-    <>
+    
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} /> {/* Ruta para el formulario de inicio de sesión */}
@@ -19,7 +19,7 @@ function App() {
         <Route path='/CrearEmprendimiento' element= {<CrearEmprendimiento />}/>
       </Routes>
     </BrowserRouter>
-  </>
+  
   )
 }
 

@@ -36,3 +36,12 @@
 
 
 }
+
+@media (max-width: 480px){
+    .abajo{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
