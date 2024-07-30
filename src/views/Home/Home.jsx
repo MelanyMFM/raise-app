@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer'
 import { Link} from 'react-router-dom';
 
 function Home(){
-    return(<>
+    return(
         <div className='page-container'>
             <Nav />
             <Header/>
@@ -21,7 +21,7 @@ function Home(){
         </div>
         
 
-    </>)
+    )
 }
 
 export default Home;

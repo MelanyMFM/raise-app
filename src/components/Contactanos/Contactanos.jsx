@@ -13,9 +13,11 @@ import {
 } from "@vis.gl/react-google-maps";
 
 function Contactanos({props}){
-    const lugar = {lat: 6.2642251, lng: -75.576734};
-
+    const lugar = { lat: props.lat, lng: props.lng };
+    console.log(lugar);
     return(
+
+        
         <div className='todo'>
             <p className='amarillo titulo-contactanos'>¡Contáctanos!</p>
             <p className='descripcion'>En {props.nombre}, estamos encantados de
