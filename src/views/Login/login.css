@@ -82,8 +82,10 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    span{
+                    #register-link{
                         color: #FFE922;
+                        text-decoration: none;
+                        font-weight: bold;
                     }
                 }
             }
