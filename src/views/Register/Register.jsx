@@ -1,6 +1,8 @@
 import './register.css';
 import React, { useState } from 'react';
-import EyeIcon from "../../assets/eye.svg"
+import EyeIcon from "../../assets/eye.svg";
+import { Link } from 'react-router-dom';
+import logo from "../../assets/logo.png";
 
 function Register(){
 
@@ -17,7 +19,9 @@ function Register(){
         <div className="bg-img" ></div>
        
         <div className="form-wrap">
-        <p clasName="back">  &lt;-- Back to Home</p>
+        <div className='mini-header'>
+        <Link to={"/"} clasName="back">  &lt;-- Back to Home</Link>
+        <img src={logo} alt="Logo" className="logo" /></div>
             <div className="form-inner">
                 <h1 className="title">Register</h1>
                 
@@ -44,10 +48,11 @@ function Register(){
                         />
                         <label htmlFor="password">Password</label>
                     </div>
-                   <div className="d-flex justify-content-between">
+                   <div >
+                    ¿Qué quieres ser?
                     <div className="form-check">
-                        ¿Qué quieres ser?
-                     <div>
+                        
+                     <div >
                         <input type="radio" className="form-check-input" id="emprendedor" name="userType"/>
                         <label htmlFor="emprendedor" className="form-check-label">Emprendedor</label>
                         </div>
@@ -60,10 +65,10 @@ function Register(){
 
 
                     <div className="d-grid mb-4">
-                        <button type="submit" className="btn btn-primary">Create an account</button>
+                        <button type="submit" className="btn btn-primary">Register</button>
                     </div>
 
-                    <div className="mb-2">Already a member? <a href="index.html">Log in</a></div>
+                    <div className="mb-2">Already a member? <Link to = {"/Login"}>Log in</Link></div>
 
 
                 </form>

@@ -134,3 +134,19 @@
 .back{
   background-color: #FFE922;
 }
+
+.form-check{
+  display:flex;
+  justify-content: space-between;
+}
+
+.logo{
+  object-fit: contain;
+  width: 10rem;
+}
+
+.mini-header{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;;
+}
