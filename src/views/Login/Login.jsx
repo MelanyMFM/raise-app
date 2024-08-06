@@ -3,7 +3,8 @@ import './login.css'
 import personas from "../../assets/personas.png";
 import EyeIcon from "../../assets/eye.svg"
 import React, { useEffect, useState } from 'react';
-
+import Register from "../Register/Register";
+import { Link } from "react-router-dom"
 
 function Login(){
 
@@ -44,7 +45,7 @@ function Login(){
                         <button>Sign in</button>
                         <div className= 'sign-up'>
                             <p>Dont have an account?</p>
-                            <span>Sign up now</span>
+                            <Link id="register-link" to = {"/Register"}>Sign up</Link>
                         </div>
                     </form>
                     </div>
