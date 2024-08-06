@@ -20,7 +20,7 @@ function Register(){
        
         <div className="form-wrap">
         <div className='mini-header'>
-        <Link to={"/"} clasName="back">  &lt;-- Back to Home</Link>
+        <Link to={"/"} className="back">  &lt;-- Back to Home</Link>
         <img src={logo} alt="Logo" className="logo" /></div>
             <div className="form-inner">
                 <h1 className="title">Register</h1>
@@ -48,7 +48,7 @@ function Register(){
                         />
                         <label htmlFor="password">Password</label>
                     </div>
-                   <div >
+                   <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
                     ¿Qué quieres ser?
                     <div className="form-check">
                         
@@ -68,7 +68,7 @@ function Register(){
                         <button type="submit" className="btn btn-primary">Register</button>
                     </div>
 
-                    <div className="mb-2">Already a member? <Link to = {"/Login"}>Log in</Link></div>
+                    <div className="mb-2">Already a member? <Link to = {"/Login"} className='amarillo'>Log in</Link></div>
 
 
                 </form>

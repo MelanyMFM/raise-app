@@ -51,6 +51,12 @@
             border: none;
         }
       
+      .register{
+        background-color: #FFE922;
+        color: #1A1C21;
+        padding: .656rem 2.156rem;
+        border-radius: 10px;
+      }
     }
 }
 
