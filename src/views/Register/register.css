@@ -127,3 +127,10 @@
     color:#001432; /* Maintain dark background on focus */
   }
 
+.form-floating{
+  display:flex;
+}
+
+.back{
+  background-color: #FFE922;
+}

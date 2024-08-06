@@ -15,9 +15,11 @@ function Register(){
 
     <div className="site-wrap d-md-flex align-items-stretch">
         <div className="bg-img" ></div>
+       
         <div className="form-wrap">
+        <p clasName="back">  &lt;-- Back to Home</p>
             <div className="form-inner">
-                <h1 className="title">Sign up</h1>
+                <h1 className="title">Register</h1>
                 
                 <form action="#" className="pt-3">
 
