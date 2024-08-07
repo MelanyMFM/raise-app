@@ -22,7 +22,7 @@ const Nav = () => {
         </div>
         <div className="right">
             <Link to={"/Login"} >Login</Link>
-            <button>Register</button>
+            <Link className="button" to={"/Register"}>Register</Link>
         </div>
     </nav>
     </>
