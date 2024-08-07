@@ -3,6 +3,7 @@ import './register.css'
 import personas from "../../assets/personas.png";
 import EyeIcon from "../../assets/eye.svg"
 import React, { useState } from 'react';
+import logo from "../../assets/logo.png"
 
 
 function Register(){
@@ -25,7 +26,10 @@ function Register(){
 
                         
                     <form className="form">
-                        <p>  &lt;-- Back to Home</p>
+                        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', height:'3rem'}}>
+                            <Link to = {'/'}>  &lt;-- Back to Home</Link>
+                            <img src={logo} style={{width: '7rem'}}/>
+                        </div>
                         <p className="titulo-login">Sign Up</p>
                         <div className= 'inputs'>
 
@@ -53,7 +57,7 @@ function Register(){
                         <label htmlFor="emprendedor" >Emprendedor</label>
                         </div>
                         <div style={{display:'flex', gap: '.5rem'}}>
-                         <input type="radio"  id="investor" name="userType" />
+                         <input type="radio"  id="investor" name="userType" checked/>
                         <label htmlFor="investor" >Investor</label>
                         </div>
                     </div>
@@ -63,7 +67,7 @@ function Register(){
                         <button>Sign Up</button>
                         <div className= 'sign-up'>
                             <p>Dont have an account?</p>
-                            <span>Sign in now</span>
+                            <Link className="amarillo" to = {'/Login'}>Sign in now</Link>
                         </div>
                     </form>
                     </div>
