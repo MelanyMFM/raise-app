@@ -66,7 +66,7 @@ function Register(){
 
                         <button>Sign Up</button>
                         <div className= 'sign-up'>
-                            <p>Dont have an account?</p>
+                            <p>Already a member?</p>
                             <Link className="amarillo" to = {'/Login'}>Sign in now</Link>
                         </div>
                     </form>
