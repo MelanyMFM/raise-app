@@ -1,9 +1,10 @@
-import Nav from "../../components/Nav/Nav";
+
 import './login.css'
 import personas from "../../assets/personas.png";
 import EyeIcon from "../../assets/eye.svg"
 import React, { useEffect, useState } from 'react';
-
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png"
 
 function Login(){
 
@@ -20,9 +21,13 @@ function Login(){
             
             <div className="login-container">
                 <div className="izq">
-                    <Nav/>
+                    
                     <div className="form-container">
                     <form className="form">
+                        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', height:'3rem'}}>
+                            <Link to = {'/'}>  &lt;-- Back to Home</Link>
+                            <img src={logo} style={{width: '7rem'}}/>
+                        </div>
                         <p className="titulo-login">Sign In</p>
                         <div className= 'inputs'>
                             <input className="input" id='email' type="email" placeholder='Email or phone number' required/>
@@ -44,7 +49,7 @@ function Login(){
                         <button>Sign in</button>
                         <div className= 'sign-up'>
                             <p>Dont have an account?</p>
-                            <span>Sign up now</span>
+                            <Link to={'/Register'} className='amarillo'>Sign up now</Link>
                         </div>
                     </form>
                     </div>
