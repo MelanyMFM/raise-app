@@ -1,9 +1,12 @@
 import './cosoMorado.css';
 import rentabilidad from '../../assets/rentabilidad.svg';
+import { useNavigate } from 'react-router-dom';
 
 function CosoMorado({props}){
-
-
+    const navigate = useNavigate();
+    const viewWindow = () => {
+        navigate(`/Donate/${props.id}`, { state: { props: props } });
+    }
     return(
     
     <div className='cosoMorado'>
@@ -17,8 +20,8 @@ function CosoMorado({props}){
             <img src={rentabilidad} alt ="rentabilidad"/>
             <p className='value'>Value: ${props.value}</p>
             <div className='botones'>
-                <button>Donate</button>
-                <button>Invest</button>
+                <button onClick={viewWindow}>Donate</button>
+                <button >Invest</button>
             </div>
         </div>
 

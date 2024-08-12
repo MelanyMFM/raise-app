@@ -6,6 +6,7 @@ import Explore from './views/Explore/Explore';
 import Emprendimiento from './views/Emprendimiento/Emprendimiento';
 import CrearEmprendimiento from './views/CrearEmprendimiento/CrearEmprendimiento';
 import Register from './views/Register/Register';
+import Donate from "./views/Donate/Donate"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/Emprendimientos/:id' element = {<Emprendimiento />}/>
         <Route path='/CrearEmprendimiento' element= {<CrearEmprendimiento />}/>
         <Route path='/Register' element= {<Register />}/>
+        <Route path="/Donate/:id" element={<Donate />} /> 
       </Routes>
     </BrowserRouter>
   

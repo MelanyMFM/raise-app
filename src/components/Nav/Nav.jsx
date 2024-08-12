@@ -5,7 +5,7 @@ import { Link} from 'react-router-dom';
 
 
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <>
     <nav className="nav-bar">
@@ -20,9 +20,9 @@ const Nav = () => {
                 <Link to={"/Explore"}>Explore</Link>
             </ul>
         </div>
-        <div className="right">
-            <Link to={"/Login"} >Login</Link>
-            <Link className="button" to={"/Register"}>Register</Link>
+        <div className="right" >
+            <Link to={"/Login"} className={props.logged ? "logged" : "not-logged"}>Login</Link>
+            <Link className="button " to={"/Register"}>Register</Link>
         </div>
     </nav>
     </>
