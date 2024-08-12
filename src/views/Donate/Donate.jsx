@@ -1,13 +1,22 @@
 import "./donate.css"
 import Nav from "../../components/Nav/Nav"
+import Footer from "../../components/Footer/Footer"
 import { useLocation } from 'react-router-dom';
-
+import { useState } from "react";
 
 function Donate(){
 
     const location = useLocation();
     const { props } = location.state;
-    
+
+    const [valor, setValor] = useState(5);
+
+    const handleInputChange = (event) => {
+        const value = event.target.value;
+        if (value === "" || /^\d+$/.test(value)) {
+            setValor(Number(value));
+        }
+    };
 
     return  <div className="donate">
     
@@ -24,27 +33,45 @@ function Donate(){
                 <img src={props.img} alt="emprendimiento"/>
 
                 <div className="donation-names">
-                    <p  style={{fontSize: "2.5rem"}}>You're supporting <span style={{fontWeight: "bold"}}>{props.nombre}</span></p>
+                    <p style={{fontSize: "2.5rem"}}>You're supporting <span style={{fontWeight: "bold"}}>{props.nombre}</span></p>
                     <p style={{fontSize: "1.5rem", color: 'rgba(0, 0, 0, 0.5)'}}>Your donation will benefit <span style={{fontWeight: "bold"}}>{props.usuario}</span></p>
                 </div>
             </div>
 
             <div className="donation-body">
-                <p>Enter your donation</p>
+                <p style={{fontSize:'1.5rem', fontWeight:'bold'}}>Enter your donation</p>
 
                 <div className="donation">
-                    {/*Poner lo de click y que se ponga la cantidad */}
                     <div style={{display:'flex'}}  className="donation-form">
-                        <p>$5</p>
-                        <p>$10</p>
-                        <p>$25</p>
-                        <p>$50</p>
-                        <p>$100</p>
-                        <p>$200</p>
+                        <p className={valor==5?"selected":""} onClick={()=>setValor(5)}>$5</p>
+                        <p className={valor==10?"selected":""} onClick={()=>setValor(10)}>$10</p>
+                        <p className={valor === 25 ? "selected" : ""} onClick={() => setValor(25)}>$25</p>
+                        <p className={valor === 50 ? "selected" : ""} onClick={() => setValor(50)}>$50</p>
+                        <p className={valor === 100 ? "selected" : ""} onClick={() => setValor(100)}>$100</p>
+                        <p className={valor === 200 ? "selected" : ""} onClick={() => setValor(200)}>$200</p>
                     </div>
+                    <input
+                        type="text"
+                        placeholder="Enter your donation"
+                        value={valor}
+                        onChange={handleInputChange}
+                        min="1"
+                        inputMode="numeric"
+                        pattern="\d*"
+                    />
+
                 </div>
 
+                <div className="your-donation" style={{fontSize:'1.5rem'}}>
 
+                    <p style={{fontWeight: "bold"}}>Your donation</p>
+                    <div style={{display:'flex', justifyContent:'space-around', color:'rgba(0, 0, 0, 0.5)', fontWeight:'bold'}}>
+                        <p>Your donation</p>
+                        <p>${valor}</p>
+                    </div>
+
+                    <button>Donate</button>
+                </div>
 
             </div>
 
@@ -52,7 +79,7 @@ function Donate(){
 
 
     </div>
-    
+    <Footer/>
     </div>
 }
 

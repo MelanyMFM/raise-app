@@ -1,5 +1,9 @@
 .donate{
-    
+    display: flex;
+    flex-direction: column;
+
+    gap:8rem;
+
     
     .donate-page{
         display: flex;
@@ -16,6 +20,9 @@
             background-color: #FfffFF;
             padding: 4.438rem;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
             .donation-head{
                 
                 display: flex;
@@ -28,26 +35,63 @@
                 .donation-names{
                     display: flex;
                     flex-direction: column;
-                    gap:1.688rem;
+                    gap:2rem;
                 }
 
             }
 
             .donation-body{
-                
+                display:flex;
+                flex-direction: column;
+                gap:2rem;
                 .donation{
-                    
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap:2rem;
                     .donation-form{
                         justify-content: center;
                         gap: 1rem;
                         p{
                             font-size: 2rem;
                             border: solid 2px rgba(0, 0, 0, 0.3);
-                            border-radius: 10px;
+                            border-radius: 20px;
                             padding:1.5rem;
-                            cursor: pointer;
-                            
+                            cursor: pointer;    
                         }
+
+                        .selected{
+                            background-color: rgba(0, 0, 0, 1);
+                            color: #FfffFF;
+                        }
+                    }
+
+                    input{
+                        width: 63%;
+                        font-size: 2rem;
+                        padding:1.5rem;
+                        text-align: right;
+                        border-radius: 20px;
+                        border-color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+
+
+                .your-donation{
+
+                    display:flex;
+                    flex-direction: column;
+                    
+                    gap:2rem;
+   
+                    button{
+                        background-color: #FFE922;
+                        border:none;
+                        border-radius: 16px;
+                        font-size: 1.5rem;
+                        padding:.5rem;
+                        width: 20%;
+                        margin:auto;
                     }
                 }
             }
