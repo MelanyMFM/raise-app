@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@github/typing-effect-element": "^0.1.0",
     "@vis.gl/react-google-maps": "^1.1.0",
+    "axios": "^1.7.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0"
