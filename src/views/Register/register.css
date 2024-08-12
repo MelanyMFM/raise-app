@@ -1,17 +1,17 @@
 @media (max-width: 768px) {
-  .login-container {
+  .register-container {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .foto-login{
+  .foto-register{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
   .form{
-        max-width: 26rem;
+    max-width: 26rem;
   }
 
   input{
@@ -37,4 +37,123 @@
   display:flex;
   align-items: center;
   justify-content: space-between;;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem; /* Ajusta según sea necesario */
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.register-container{
+  background: linear-gradient(to right, #001432fc, #1d1e2400, #001432);
+  background-repeat: no-repeat;
+  height:100vh;
+  background-color: #001432;
+  display:flex;
+  color:#FFFFFF;
+  .izq{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 50%;
+      .nav-bar{
+          position: relative;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          padding: 1.5rem;
+          .center{
+              gap:1rem;
+          }
+          .right{
+              display: none;
+          }
+      }
+      .form-container{
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .form{
+              max-width: 29.75rem;
+              padding: 3rem 4.125rem;
+              border-radius: 10px;
+              display: flex;
+              flex-direction: column;
+              background-color: rgba(0, 0, 0, .5);
+  
+  
+              gap:1.4rem;
+              .titulo-login{
+                  font-weight: bold;
+                  font-size: 1.625rem;
+              }
+              .inputs{
+                  display: flex;
+                  flex-direction : column;
+                  gap: .8rem;
+                  .name, .email, .password{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .2rem;
+                  }
+                  .input{
+                      height: 3rem;
+                      border-radius: 6px;
+                      padding:  0.875rem 1rem;
+                  }
+                  .password-container{
+                      position: relative;
+                      
+                      display: flex;
+                      align-items: center;
+                      input{ width:21.438rem ;
+                          height: 3rem;
+                          border-radius: 6px;
+                          padding:  0.875rem 1rem;
+                      }
+                      img{
+                          position: absolute;
+                          right: 1rem;
+                          cursor: pointer;
+                      }
+                  }
+              }
+              
+              button{
+                  background-color: #FFE922;
+                  padding: .8rem;
+                  font-weight: bold;
+                  border-radius: 6px;
+                  border: none;
+              }
+  
+              .sign-up{
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  #register-link{
+                      color: #FFE922;
+                      text-decoration: none;
+                      font-weight: bold;
+                  }
+              }
+          }
+      }
+      
+  }
+
+  .right{
+      width: 50%;
+      height: 100%;
+  }
+
+  .foto-register{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
+  }
 }
