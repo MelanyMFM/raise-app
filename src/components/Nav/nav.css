@@ -1,6 +1,7 @@
 .nav-bar {
     position: absolute;
     width: 100%;
+    max-height: 129px;
     padding: 1.5rem 3rem;
     display: flex;
     justify-content: space-between;

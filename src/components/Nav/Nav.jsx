@@ -26,7 +26,7 @@ const Nav = () => {
     },[]);
 
 return (
-    <nav className="nav-bar">  
+    <nav className="nav-bar" >  
         <div className="left">
             <img src={Logo} alt="Raise App Logo"/>
         </div>
