@@ -20,8 +20,7 @@ function Donate(){
 
     return  <div className="donate">
     
-    {/* <Nav logged={true}/> */}
-    
+    <Nav /> 
     <div className="donate-page">
 
         
