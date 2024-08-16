@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './profileNav.css';
-
+import ExitIcon from "./../../assets/exit_icon.svg";
 
 const ProfileNav = ({user}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,12 +18,12 @@ const ProfileNav = ({user}) => {
   return (
     <div className="profile">
       <button onClick={toggleDropdown} className='amarillo'>
-        {user.name } v
+        @{ user.name } v
       </button>
       {isOpen && (
         <ul className="drop" style={{listStyleType: 'none'}}>
           <li><p>Profile Settings</p></li>
-          <li><p className='logout' onClick={logout}>Logout</p></li> 
+          <li><p className='logout' onClick={logout}>Logout <img src={ExitIcon} alt="" /></p></li> 
         </ul>
       )}
     </div>
