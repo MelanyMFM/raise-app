@@ -1,9 +1,8 @@
-import React from 'react'
 import './footer.css'
 import Location from '../../assets/location-footer.svg'
 import Email from '../../assets/email-footer.svg'
 import Phone from '../../assets/call-calling.svg'
-import logo from '../../assets/logo-footer.svg'
+import logo from '../../assets/logo-footer.png'
 
 const Footer = () => {
   return (

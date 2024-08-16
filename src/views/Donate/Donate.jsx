@@ -2,7 +2,7 @@ import "./donate.css"
 import Nav from "../../components/Nav/Nav"
 import Footer from "../../components/Footer/Footer"
 import { useLocation } from 'react-router-dom';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Donate(){
 
@@ -10,6 +10,11 @@ function Donate(){
     const { props } = location.state;
 
     const [valor, setValor] = useState(5);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
 
     const handleInputChange = (event) => {
         const value = event.target.value;

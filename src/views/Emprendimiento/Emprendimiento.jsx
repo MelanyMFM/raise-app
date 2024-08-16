@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './emprendimiento.css';
 import CosoMorado from '../../components/CosoMorado/CosoMorado';
 import { useLocation } from 'react-router-dom';
@@ -9,6 +9,11 @@ import Footer from '../../components/Footer/Footer';
 const Emprendimiento = () => {
   const location = useLocation();
   const { props } = location.state;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const maxImagesToShow = 4;

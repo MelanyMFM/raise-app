@@ -1,11 +1,10 @@
 import './contact.css'
-import img from '../../assets/contact-img.png'
 import location from '../../assets/location.svg'
 import email from '../../assets/email-icon.svg'
 import github from '../../assets/github-icon.svg'
 
 function Contact(){
-    return(<div className='contacto'>
+    return(<div className='contact contacto'>
 
         <img className='img-contact' src="https://syntrio.com/wp-content/uploads/2022/11/syntrio-contact-purple-us.png" alt='contact-img' />
 
