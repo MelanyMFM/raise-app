@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import Nav from '../../components/Nav/Nav';
 import Contactanos from '../../components/Contactanos/Contactanos';
 import Footer from '../../components/Footer/Footer';
+import PropTypes from 'prop-types';
 
 const Emprendimiento = () => {
   const location = useLocation();
@@ -57,5 +58,6 @@ const Emprendimiento = () => {
     </>
   );
 };
+
 
 export default Emprendimiento;

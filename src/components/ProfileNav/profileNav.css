@@ -51,6 +51,14 @@
         padding: 1rem 1.5rem;
         li{
             cursor: pointer;
+
+            .profile-settings{
+                transition: all .3s;
+            }
+
+            .profile-settings:hover{
+                color: #FFE922;
+            }
         }
         .logout{
             display: flex;

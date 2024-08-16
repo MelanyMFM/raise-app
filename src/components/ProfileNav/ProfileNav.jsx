@@ -13,6 +13,10 @@ const ProfileNav = ({ user }) => {
     setIsOpen(!isOpen);
   };
 
+  const handleProfileSettings = () => {
+    navigate(`/users/edit/${user.id}`);
+  }
+
 
   const logout = () => {
     localStorage.removeItem('user'); 
@@ -28,7 +32,7 @@ const ProfileNav = ({ user }) => {
       </button>
       {isOpen && (
         <ul className="drop" style={{listStyleType: 'none'}}>
-          <li><p>Profile Settings</p></li>
+          <li onClick={handleProfileSettings}><p className='profile-settings'>Profile Settings</p></li>
           <li><p className='logout' onClick={logout}>Logout <img src={ExitIcon} alt="" /></p></li> 
         </ul>
       )}
