@@ -36,6 +36,7 @@
         box-shadow: inset 0 0 100rem rgba(0, 0, 0, 0.9); /* Sombra hacia adentro */
         width: 100%;
         display:flex;
+        gap: 1rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
