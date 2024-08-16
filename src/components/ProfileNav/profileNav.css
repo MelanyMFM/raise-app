@@ -4,25 +4,44 @@
     gap:.5rem;
     align-items: center;
     justify-content: center;
+    position: relative;
     button{
         display:flex;
+        border: none;
         background-color: rgba(0, 0, 0, .51);
         border-radius: 10px;
         align-items: center;
         padding:1rem 1.5rem;
-        font-size: 1rem;
-
+        font-size: 1.2rem;
     }
 
     .drop{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 105%;
+        right: 0;
+        width: max-content;
         background-color: rgba(0, 0, 0, .51);
         border-radius: 10px;
-        padding:1.5rem;
+        padding: 1rem 1.5rem;
+        li{
+            cursor: pointer;
+        }
+        .logout{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            text-align: center;
+            color: #000;
+            background-color: #FFE922;
+            border-radius: 4px;
+            padding: .5rem 3rem;
+        }
     }
 }
 
 
-.logout{
-
-    
-}
