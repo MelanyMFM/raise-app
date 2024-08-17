@@ -5,13 +5,35 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    .amarillo{
+        gap: 2rem;
+        .right-container{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            .profile-img{
+                width: 3rem;
+                height: 3rem;
+                border: solid 2px #FFE922;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .profile-img{
+            width: 3rem;
+            height: 3rem;
+            border: solid 2px #FFE922;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
     button{
         display:flex;
         border: none;
         background-color: rgba(0, 0, 0, .51);
         border-radius: 10px;
         align-items: center;
-        padding:1rem 1.5rem;
+        padding:.7rem 1.5rem;
         font-size: 1.2rem;
     }
 
@@ -29,6 +51,14 @@
         padding: 1rem 1.5rem;
         li{
             cursor: pointer;
+
+            .profile-settings{
+                transition: all .3s;
+            }
+
+            .profile-settings:hover{
+                color: #FFE922;
+            }
         }
         .logout{
             display: flex;
@@ -40,6 +70,10 @@
             background-color: #FFE922;
             border-radius: 4px;
             padding: .5rem 3rem;
+            transition: all .3s;
+        }
+        .logout:hover{
+            background-color: #FFD700;
         }
     }
 }

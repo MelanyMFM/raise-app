@@ -14,10 +14,9 @@
         width: 25%;
 
         img{
-            width: 12rem;
             height: 3rem;
-            object-fit: cover;
-
+            object-fit:fill;
+            cursor: pointer;
         }
     }
   

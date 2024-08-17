@@ -89,6 +89,8 @@ function Register() {
             email,
             password,
             type: userType,
+            image: '',
+            publicKey: ''
         };
 
         try {

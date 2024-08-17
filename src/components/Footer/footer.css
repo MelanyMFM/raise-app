@@ -23,11 +23,12 @@
         .left{
             display:flex;
             flex-direction:column;
-            
+            max-width: min-content;
+            gap: 1.5rem;
             .logo-container{
                 display:flex;
                 align-items: center;
-                justify-content:start;
+                justify-content:center;
                 min-width:100%;
                 img{
                 
@@ -67,9 +68,9 @@
     
         .right{
             text-align:right;
-            padding-left: 4rem;
             align-items: center;
             display: flex;
+            max-width: 14.188rem;
         }
     }
     .copy{

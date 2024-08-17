@@ -1,12 +1,37 @@
 import './nav.css'
 import Logo from '../../assets/logo.png'
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProfileNav from '../ProfileNav/ProfileNav';
+import { Link as ScrollLink, scroller } from 'react-scroll';
+
 
 const Nav = () => {
+    const navigate = useNavigate();
     const [logged, setLogged] = useState(false);
     const [user, setUser] = useState(null);
+
+    const handleNavigation = ( target ) => {
+        if (window.location.pathname !== "/") {
+            navigate("/", { replace: true });
+            setTimeout(() => {
+                scroller.scrollTo(target, {
+                    duration: 800,
+                    delay: 0,
+                    smooth: 'easeInOutQuart',
+
+                });
+            }, 100);  // Espera un poco para asegurarte de que la navegación se complete
+        } else {
+            scroller.scrollTo(target, {
+                duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            });
+        }
+    };
+
     useEffect(() => {
 
         const user1 = JSON.parse(localStorage.getItem('user'));
@@ -28,13 +53,15 @@ const Nav = () => {
 return (
     <nav className="nav-bar" >  
         <div className="left">
-            <img src={Logo} alt="Raise App Logo"/>
+            <img src={Logo} alt="Raise App Logo"  onClick={() =>{navigate("/")
+            }
+            } />
         </div>
         <div className="center">
             <ul>
-                <Link to={"/"}>Home</Link>
-                <li>About</li>
-                <li>Contact</li>
+                <li onClick={() => handleNavigation('home')}>Home</li>
+                <li onClick={() => handleNavigation('about')}>About</li>
+                <li onClick={() => handleNavigation('contact')}>Contact</li>
                 <Link to={"/Explore"}>Explore</Link>
             </ul>
         </div>

@@ -2,7 +2,7 @@ import './explore.css';
 import Nav from '../../components/Nav/Nav';
 import Emprendimiento from '../../components/Emprendimiento/Emprendimiento';
 import emprendimientos from '../../assets/emprendimientos/emprendimientos';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
 import TextoAnimado from '../../components/Texto-animado/TextoAnimado';
 
@@ -10,6 +10,11 @@ function Explore() {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState(''); //b
     const itemsPerPage = 9;
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+    }, []);
+
 
     const filteredItems = searchTerm ? emprendimientos.filter(emprendimiento =>
          emprendimiento.nombre.toLowerCase().includes(searchTerm.toLowerCase())
@@ -65,8 +70,9 @@ function Explore() {
                     <span>Page {currentPage}</span>
                     <p onClick={handleNextPage} disabled={currentPage === Math.ceil(filteredItems.length / itemsPerPage)}>--&gt; </p>
                 </div>
-                <Footer/>
+                
             </div>
+            <Footer/>
         </>
     )
 }

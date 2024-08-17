@@ -1,0 +1,89 @@
+.edit-profile-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5rem;
+	.edit-profile-form{
+		background-color: rgba(0, 0, 0, .5);
+		padding: 3rem 10rem;
+		padding-bottom: 8rem;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5rem;
+		h2{
+			font-size: 4rem;
+			color: #FFE922;
+		}
+		form{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 3rem;
+			.input-form{
+				width: 100%;
+				display: flex;
+				gap: 3rem;
+				align-items: center;
+				justify-content: space-between;
+				label{
+					font-size: 1.75rem;
+					color: #FFE922;
+				}
+				input{
+					border: none;
+					border-radius: 5px;
+					padding: .8rem .8rem;
+					font-size: 1rem;
+					width: 60%;
+					
+				}
+				input::placeholder{
+					font-size: 1rem;
+					color: #573232;
+				}
+				#image{
+					display: none;
+				}
+				.image-input{
+					display: flex;
+					align-items: center;
+					gap: 2rem;
+					img{
+						width: 10rem;
+						height: 10rem;
+						border-radius: 50%;
+					}
+					span{
+						font-size: 1.125rem;
+						color: black;
+						padding: .5rem 2.5rem;
+						background-color: white;
+						border-radius: 4px;
+						cursor: pointer;
+					}
+				}
+			}
+			.wallet-input{
+				padding-bottom: 5rem;
+			}
+			.btn-form{
+				cursor: pointer;
+				background-color: #FFE922;
+				color: #000;
+				border: none;
+				border-radius: 4px;
+				font-size: 1.5rem;
+				padding: .3rem 4rem;
+				transition: .3s;	
+			}
+			.btn-form:hover{
+				background-color: #ffe922e1;
+			}
+		}
+	}
+}
