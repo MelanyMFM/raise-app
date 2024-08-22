@@ -90,7 +90,7 @@ function Register() {
             password,
             type: userType,
             image: '',
-            publicKey: ''
+            publicKey: null,
         };
 
         try {
