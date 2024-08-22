@@ -12,11 +12,11 @@ function CosoMorado({props}){
     <div className='cosoMorado'>
         <div className='cosoMoradoPequeño'>
         <div className='izquierda'>
-            <img src={props.img} alt="imagen-emprendimiento"/>
-            <p>{props.usuario}</p>
+            <img src={props.image} alt="imagen-emprendimiento"/>
+            <p>{props.entrepreneur.user.name}</p>
         </div>
         <div className='derecha'>
-            <p className='nombre'>{props.nombre}</p>
+            <p className='nombre'>{props.name}</p>
             <img src={rentabilidad} alt ="rentabilidad"/>
             <p className='value'>Value: ${props.value}</p>
             <div className='botones'>
@@ -27,7 +27,7 @@ function CosoMorado({props}){
 
         </div>
 
-        <p className='descripcion'>{props.descripcion}</p>
+        <p className='descripcion'>{props.description}</p>
     </div>)
 }
 

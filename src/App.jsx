@@ -8,6 +8,7 @@ import CrearEmprendimiento from './views/CrearEmprendimiento/CrearEmprendimiento
 import Register from './views/Register/Register';
 import Donate from "./views/Donate/Donate"
 import EditProfile from './views/EditProfile/EditProfile';
+import MyBusinesses from './views/MyBusinesses/MyBusinesses';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/register' element= {<Register />}/>
         <Route path="/donate/:id" element={<Donate />} />
         <Route path="/users/edit/:id" element={<EditProfile/>} />
+        <Route path="/myBusinesses/:id" element={<MyBusinesses />} />
 
       </Routes>
     </BrowserRouter>

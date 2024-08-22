@@ -11,16 +11,16 @@ function Emprendimiento({props}){
 
     return(
         <div className='emprendimiento-container'>
-            <p className='nombre-emprendimiento' onClick={viewWindow}>{props.nombre}</p>
+            <p className='nombre-emprendimiento' onClick={viewWindow}>{props.name}</p>
             <div className='usuario-y-ciudad'>
-                <p className='usuario-emprendimiento'>{props.usuario}</p>
-                <p className='ciudad-emprendimiento'>{props.ciudad}</p>
+                <p className='usuario-emprendimiento'>@{props.entrepreneur.user.name}</p>
+                <p className='ciudad-emprendimiento'>{props.city}</p>
             </div>
-            <img src={props.img} onClick={viewWindow} alt="imagen del emprendimiento"/>
+            <img src={props.image} onClick={viewWindow} alt="imagen del emprendimiento"/>
             <div className='descripcion-y-rating'>
-                <p className='descripcion-emprendimiento'>{props.descripcion}</p>
+                <p className='descripcion-emprendimiento'>{props.description}</p>
                 <div className='calificacion-y-mas'>
-                    <Calificacion rating={props.calificacion}/>
+                    <Calificacion rating={props.averageScore}/>
                     <p className='more-vista' onClick={viewWindow}>MORE</p>
                 </div>
             </div>

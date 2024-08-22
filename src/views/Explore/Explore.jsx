@@ -1,24 +1,36 @@
 import './explore.css';
 import Nav from '../../components/Nav/Nav';
 import Emprendimiento from '../../components/Emprendimiento/Emprendimiento';
-import emprendimientos from '../../assets/emprendimientos/emprendimientos';
 import { useState, useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
 import TextoAnimado from '../../components/Texto-animado/TextoAnimado';
+import apiService from '../../api/apiService';
+import DataNotFound from '../../assets/data-not-found.svg';
 
 function Explore() {
+    const [emprendimientos, setEmprendimientos] = useState([]); // a
     const [currentPage, setCurrentPage] = useState(1);
-    const [searchTerm, setSearchTerm] = useState(''); //b
+    const [searchTerm, setSearchTerm] = useState('');
     const itemsPerPage = 9;
 
     useEffect(() => {
-    window.scrollTo(0, 0);
+        apiService.getBusiness()
+            .then(data => {
+                console.log(data);
+                setEmprendimientos(data); // b
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }, []);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const filteredItems = searchTerm ? emprendimientos.filter(emprendimiento =>
-         emprendimiento.nombre.toLowerCase().includes(searchTerm.toLowerCase())
-          ): emprendimientos;
+        emprendimiento.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+    ) : emprendimientos;
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -35,19 +47,19 @@ function Explore() {
             setCurrentPage(currentPage + 1);
         }
     }
- 
-    function handleSearch(event) {  //No va
+
+    function handleSearch(event) {
         setSearchTerm(event.target.value);
-        setCurrentPage(1); 
+        setCurrentPage(1);
     }
 
     return (
         <>
             <div className='explore'>
-                <Nav/>
+                <Nav />
                 <div className='header-explore'>
                     <p className='titulo-explore amarillo'>Explore ☻</p>
-                    <TextoAnimado className="texto-animado"/>
+                    <TextoAnimado className="texto-animado" />
                     <input
                         type="text"
                         placeholder="🔍︎ Search"
@@ -57,22 +69,37 @@ function Explore() {
                     />
                 </div>
                 <p className='subtitulo-header'>Join the movement. Build a stronger tomorrow.</p>
-                <p className='titulo-emprendimientos amarillo'>Emprendimientos</p>
-                <div className='emprendimientos'>
-                    {currentItems.map(emprendimiento => 
-                    <Emprendimiento key={emprendimiento.id}
-                        props = {emprendimiento}
-                        className= "emprendimiento"//{emprendimiento.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ? 'highlight' : ''}
-                        />)}
-                </div>
-                <div className='pagination'>
-                    <p onClick={handlePrevPage} disabled={currentPage === 1}> &lt;-- </p>
-                    <span>Page {currentPage}</span>
-                    <p onClick={handleNextPage} disabled={currentPage === Math.ceil(filteredItems.length / itemsPerPage)}>--&gt; </p>
-                </div>
-                
+                {
+                    emprendimientos.length === 0 ? 
+                    <>
+                    <div className="no-business-container">
+                        <h4 className="no-business-text">
+                            There is not business to show
+                        </h4>
+                        <img src={DataNotFound} alt="" />
+                    </div>                    
+                    </> : (
+                        <>
+                            <p className='titulo-emprendimientos amarillo'>Business</p>
+                            <div className='emprendimientos'>
+                                {currentItems.map(emprendimiento =>
+                                    <Emprendimiento 
+                                    key={emprendimiento.id}
+                                    props={emprendimiento}
+                                    className="emprendimiento"
+                                    />
+                                )}
+                            </div>
+                            <div className='pagination'>
+                                <p onClick={handlePrevPage} disabled={currentPage === 1}> &lt;-- </p>
+                                <span>Page {currentPage}</span>
+                                <p onClick={handleNextPage} disabled={currentPage === Math.ceil(filteredItems.length / itemsPerPage)}>--&gt; </p>
+                            </div>
+                        </>
+                    )
+                }
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

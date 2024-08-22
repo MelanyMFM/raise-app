@@ -13,19 +13,18 @@ import {
 } from "@vis.gl/react-google-maps";
 
 function Contactanos({props}){
-    const lugar = { lat: props.lat, lng: props.lng };
+    const lugar = { lat: 6.2300, lng: -75.5900 };
     console.log(lugar);
     return(
 
         
         <div className='todo'>
             <p className='amarillo titulo-contactanos'>¡Contáctanos!</p>
-            <p className='descripcion'>En {props.nombre}, estamos encantados de
-                 atenderte y responder a cualquier pregunta que tengas sobre nuestros deliciosos sándwiches artesanales.</p>
+            <p className='descripcion'>{props.contact_message}</p>
 
             <div className='abajo'>
                 <div className='izq'>
-                    <p>Telefono: {props.telefono}</p>
+                    <p>Telefono: {props.phone}</p>
                     <p>Email: {props.email}</p>
                     <p>Redes Sociales: </p>
                     <p>-&gt; Facebook: {props.facebook}</p>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types'; // Import prop-types library
 import './profileNav.css';
 import ExitIcon from "./../../assets/exit_icon.svg";
 import { useNavigate } from 'react-router-dom';
@@ -12,6 +13,16 @@ const ProfileNav = ({ user }) => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleUserTypeConf = () => {
+    if (user.type === "ENTREPRENEUR") {
+      navigate(`/myBusinesses/${user.id}`);
+    } else if (user.type === "INVESTOR") {
+      navigate(`/myInvestments/${user.id}`);
+    } else {
+      console.error('User type not defined');
+    }
+  }
 
   const handleProfileSettings = () => {
     navigate(`/users/edit/${user.id}`);
@@ -32,12 +43,29 @@ const ProfileNav = ({ user }) => {
       </button>
       {isOpen && (
         <ul className="drop" style={{listStyleType: 'none'}}>
-          <li onClick={handleProfileSettings}><p className='profile-settings'>Profile Settings</p></li>
-          <li><p className='logout' onClick={logout}>Logout <img src={ExitIcon} alt="" /></p></li> 
+          <li onClick={ handleUserTypeConf }>{user.type === "ENTREPRENEUR" ? <><p>Your business</p></> 
+          : user.type === "INVESTOR" ? <><p>Your Investments</p></>
+          :<><p>User rol not defined</p></>}
+          </li>
+          <li onClick={handleProfileSettings}>
+            <p className='profile-settings'>Profile Settings</p>
+          </li>
+          <li>
+            <p className='logout' onClick={logout}>Logout <img src={ExitIcon} alt="" /></p>
+          </li> 
         </ul>
       )}
     </div>
   );
+};
+
+ProfileNav.propTypes = {
+  user: PropTypes.shape({
+    image: PropTypes.string, // Add prop type validation for 'user.image'
+    name: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default ProfileNav;
