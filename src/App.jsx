@@ -8,6 +8,7 @@ import CrearEmprendimiento from './views/CrearEmprendimiento/CrearEmprendimiento
 import Register from './views/Register/Register';
 import Donate from "./views/Donate/Donate"
 import EditProfile from './views/EditProfile/EditProfile';
+import Prueba from './views/Prueba/Prueba';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/crearEmprendimiento' element= {<CrearEmprendimiento />}/>
         <Route path='/register' element= {<Register />}/>
         <Route path="/donate/:id" element={<Donate />} />
+        <Route path="/prueba/" element={<Prueba />} />
         <Route path="/users/edit/:id" element={<EditProfile/>} />
 
       </Routes>

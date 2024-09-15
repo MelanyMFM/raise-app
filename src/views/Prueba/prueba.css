@@ -1,0 +1,23 @@
+/* CSS for the 3 buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send{
+    background-color: #007bff;
+    color: #fff;
+}
+
+.burn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.mint {
+    background-color: #28a745;
+    color: #fff;
+}
